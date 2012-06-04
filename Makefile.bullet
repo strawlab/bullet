@@ -46,7 +46,7 @@ build_tarball: $(SVN_DIR) patched
 	# How to build tarball goes here
 	-cd $(SVN_DIR) && cmake . && make clean
 	-cd $(SVN_DIR) && rm -f CMakeCache.txt
-	mkdir -p build
+	#mkdir -p build
 	tar --exclude="Extras" --exclude=".svn" -czf $(TARBALL) $(SVN_DIR)
 
 
@@ -76,5 +76,5 @@ clean:
 wipe: clean
 	-rm -f patched
 	-rm -rf bullet_svn
-	-rm -rf build
+	#-rm -rf build
 
